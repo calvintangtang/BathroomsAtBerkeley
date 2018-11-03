@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A1B104218E5C9400098A3D /* Bathroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1B103218E5C9400098A3D /* Bathroom.swift */; };
+		37A1B106218E66CA00098A3D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1B105218E66CA00098A3D /* Review.swift */; };
 		37B52AE0218E15EC005A5D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B52ADF218E15EC005A5D5B /* AppDelegate.swift */; };
-		37B52AE2218E15EC005A5D5B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B52AE1218E15EC005A5D5B /* FirstViewController.swift */; };
-		37B52AE4218E15EC005A5D5B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B52AE3218E15EC005A5D5B /* SecondViewController.swift */; };
+		37B52AE2218E15EC005A5D5B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B52AE1218E15EC005A5D5B /* MapViewController.swift */; };
+		37B52AE4218E15EC005A5D5B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B52AE3218E15EC005A5D5B /* SearchViewController.swift */; };
 		37B52AE7218E15EC005A5D5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B52AE5218E15EC005A5D5B /* Main.storyboard */; };
 		37B52AE9218E15ED005A5D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B52AE8218E15ED005A5D5B /* Assets.xcassets */; };
 		37B52AEC218E15ED005A5D5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B52AEA218E15ED005A5D5B /* LaunchScreen.storyboard */; };
 		37B52AF7218E15ED005A5D5B /* BathroomsAtBerkeleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B52AF6218E15ED005A5D5B /* BathroomsAtBerkeleyTests.swift */; };
 		37B52B02218E15ED005A5D5B /* BathroomsAtBerkeleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B52B01218E15ED005A5D5B /* BathroomsAtBerkeleyUITests.swift */; };
+		37B52B10218E272A005A5D5B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B52B0F218E272A005A5D5B /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37A1B103218E5C9400098A3D /* Bathroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bathroom.swift; sourceTree = "<group>"; };
+		37A1B105218E66CA00098A3D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		37B52ADC218E15EC005A5D5B /* BathroomsAtBerkeley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BathroomsAtBerkeley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B52ADF218E15EC005A5D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37B52AE1218E15EC005A5D5B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		37B52AE3218E15EC005A5D5B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		37B52AE1218E15EC005A5D5B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		37B52AE3218E15EC005A5D5B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		37B52AE6218E15EC005A5D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37B52AE8218E15ED005A5D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B52AEB218E15ED005A5D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		37B52AFD218E15ED005A5D5B /* BathroomsAtBerkeleyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BathroomsAtBerkeleyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B52B01218E15ED005A5D5B /* BathroomsAtBerkeleyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomsAtBerkeleyUITests.swift; sourceTree = "<group>"; };
 		37B52B03218E15ED005A5D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B52B0F218E272A005A5D5B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				37B52ADF218E15EC005A5D5B /* AppDelegate.swift */,
-				37B52AE1218E15EC005A5D5B /* FirstViewController.swift */,
-				37B52AE3218E15EC005A5D5B /* SecondViewController.swift */,
+				37B52AE1218E15EC005A5D5B /* MapViewController.swift */,
+				37B52B0F218E272A005A5D5B /* ListViewController.swift */,
+				37B52AE3218E15EC005A5D5B /* SearchViewController.swift */,
 				37B52AE5218E15EC005A5D5B /* Main.storyboard */,
 				37B52AE8218E15ED005A5D5B /* Assets.xcassets */,
 				37B52AEA218E15ED005A5D5B /* LaunchScreen.storyboard */,
 				37B52AED218E15ED005A5D5B /* Info.plist */,
+				37A1B103218E5C9400098A3D /* Bathroom.swift */,
+				37A1B105218E66CA00098A3D /* Review.swift */,
 			);
 			path = BathroomsAtBerkeley;
 			sourceTree = "<group>";
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B52AE4218E15EC005A5D5B /* SecondViewController.swift in Sources */,
+				37B52AE4218E15EC005A5D5B /* SearchViewController.swift in Sources */,
 				37B52AE0218E15EC005A5D5B /* AppDelegate.swift in Sources */,
-				37B52AE2218E15EC005A5D5B /* FirstViewController.swift in Sources */,
+				37B52B10218E272A005A5D5B /* ListViewController.swift in Sources */,
+				37A1B104218E5C9400098A3D /* Bathroom.swift in Sources */,
+				37B52AE2218E15EC005A5D5B /* MapViewController.swift in Sources */,
+				37A1B106218E66CA00098A3D /* Review.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
