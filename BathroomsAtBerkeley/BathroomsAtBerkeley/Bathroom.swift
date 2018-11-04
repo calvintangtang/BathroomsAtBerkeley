@@ -6,6 +6,8 @@
 //  Copyright © 2018 Team :o. All rights reserved.
 //
 import Foundation
+import CoreLocation
+
 enum tags:String {
     case GenderNeutral
     case PrivateStall
@@ -22,15 +24,19 @@ class Bathroom {
     /* Total number of reviews */
     var numReviews:Int
     
+    /* Total number of reviews */
+    var location:CLLocationCoordinate2D
+    
     /* Array of tags associated with bathroom */
     var tags = [String]()
     
     /* Initializes new bathroom with name NAME and rating
      of 0.0 */
-    init (name:String) {
+    init (name:String, latitude:Double, longitude:Double) {
         self.name = name
         self.rating = 0.0
         self.numReviews = 0
+        self.location = CLLocationCoordinate2D(latitude:latitude, longitude:longitude)
     }
     
     /* Returns name of bathroom */

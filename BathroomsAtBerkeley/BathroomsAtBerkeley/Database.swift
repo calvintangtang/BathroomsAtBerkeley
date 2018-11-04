@@ -25,16 +25,16 @@ class Database {
     
     /* Add default value bathrooms for testing */
     func addBathrooms() {
-        self.bathrooms.append(Bathroom(name:"Moffitt Library"))
-        self.bathrooms.append(Bathroom(name:"Soda Hall"))
-        self.bathrooms.append(Bathroom(name:"Dwinelle Hall"))
-        self.bathrooms.append(Bathroom(name:"Bancroft Library"))
-        self.bathrooms.append(Bathroom(name:"Martin Luther King Jr. Student Union"))
+        addBathroom(name:"Moffit Library", latitude: 37.872574, longitude: -122.260566)
+        addBathroom(name:"Dwinelle Hall", latitude: 37.8705, longitude: -122.2606)
+        addBathroom(name:"Soda Hall", latitude: 37.8756, longitude: -122.2588)
+//        self.bathrooms.append(Bathroom(name:"Bancroft Library"))
+//        self.bathrooms.append(Bathroom(name:"Martin Luther King Jr. Student Union"))
     }
     
     /* Add BATHROOM object to database */
-    func addBathroom(name:String) {
-        self.bathrooms.append(Bathroom(name:name))
+    func addBathroom(name:String, latitude:Double, longitude:Double) {
+        self.bathrooms.append(Bathroom(name:name, latitude:latitude, longitude:longitude))
     }
     
     /* Add REVIEW object to database */
