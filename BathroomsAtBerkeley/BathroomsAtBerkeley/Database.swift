@@ -25,7 +25,7 @@ class Database {
     
     /* Add default value bathrooms for testing */
     func addBathrooms() {
-        addBathroom(name:"Moffit Library", latitude: 37.872574, longitude: -122.260566)
+        addBathroom(name:"Moffitt Library", latitude: 37.872574, longitude: -122.260566)
         addBathroom(name:"Dwinelle Hall", latitude: 37.8705, longitude: -122.2606)
         addBathroom(name:"Soda Hall", latitude: 37.8756, longitude: -122.2588)
 //        self.bathrooms.append(Bathroom(name:"Bancroft Library"))
@@ -37,9 +37,10 @@ class Database {
         self.bathrooms.append(Bathroom(name:name, latitude:latitude, longitude:longitude))
     }
     
-    /* Add REVIEW object to database */
+    /* Add REVIEW object to database. Updates BATHROOM review count and updates number of reviews. */
     func addReview(name:String, rating:Double, reviewText:String, author:String) {
         self.reviews.append(Review(name:name, rating:rating, reviewText:reviewText, author:author))
+        self.updateBathroomRating(name: name, rating: rating)
     }
     
     /* Returns a review if it exists in the database. If not, returns nil */
@@ -60,5 +61,14 @@ class Database {
             }
         }
         return nil
+    }
+    
+    /* Updates bathroom rating directly in array */
+    func updateBathroomRating (name:String, rating:Double) {
+        for i in 0..<self.bathrooms.count {
+            if (self.bathrooms[i].name == name) {
+                self.bathrooms[i].updateRating(newRating: rating)
+            }
+        }
     }
 }

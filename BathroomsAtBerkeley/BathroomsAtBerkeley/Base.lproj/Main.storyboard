@@ -90,7 +90,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Bring me there!"/>
                                 <connections>
-                                    <segue destination="vk1-3E-CWQ" kind="show" id="axD-td-egr"/>
+                                    <segue destination="vk1-3E-CWQ" kind="show" id="bYa-cb-9CW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,6 +172,9 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="i1c-Ec-ufK" kind="show" id="liR-yi-lYu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -194,6 +197,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PcV-91-paj"/>
                     </view>
+                    <navigationItem key="navigationItem" id="81t-er-tnf"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="bathroomName" destination="1aV-cP-VIo" id="dlf-cL-LKf"/>
@@ -204,7 +208,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFK-3X-h7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4088.8000000000002" y="1053.3733133433284"/>
+            <point key="canvasLocation" x="3924" y="1052"/>
+        </scene>
+        <!--Write a Review-->
+        <scene sceneID="Gc4-U7-7Vi">
+            <objects>
+                <viewController title="Write a Review" id="i1c-Ec-ufK" customClass="WriteReviewViewController" customModule="BathroomsAtBerkeley" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oPg-CQ-J4e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bathroom Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw2-KL-5qm">
+                                <rect key="frame" x="16" y="74" width="175" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-rY-yyh">
+                                <rect key="frame" x="34" y="126" width="308" height="425"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="yer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-9p-gY3">
+                                <rect key="frame" x="213" y="559" width="129" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit Review"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButton:" destination="i1c-Ec-ufK" eventType="touchUpInside" id="aoy-2v-7YW"/>
+                                    <segue destination="i0a-9Q-f5E" kind="show" id="Zcu-Fk-aR0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q8Z-9p-gY3" firstAttribute="top" secondItem="ZzV-rY-yyh" secondAttribute="bottom" constant="8" id="0UJ-c4-3uw"/>
+                            <constraint firstItem="ZzV-rY-yyh" firstAttribute="top" secondItem="vw2-KL-5qm" secondAttribute="bottom" constant="22" id="3ni-1I-k18"/>
+                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="ZzV-rY-yyh" secondAttribute="trailing" constant="33" id="59U-AT-diD"/>
+                            <constraint firstItem="vw2-KL-5qm" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="16" id="amT-xH-RwZ"/>
+                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="bottom" secondItem="Q8Z-9p-gY3" secondAttribute="bottom" constant="23" id="atm-83-vwW"/>
+                            <constraint firstItem="ZzV-rY-yyh" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="34" id="dqq-dI-tJX"/>
+                            <constraint firstItem="vw2-KL-5qm" firstAttribute="top" secondItem="0ij-pZ-9Z8" secondAttribute="top" constant="10" id="eDu-sl-xJK"/>
+                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="Q8Z-9p-gY3" secondAttribute="trailing" constant="33" id="pir-Gb-GSU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0ij-pZ-9Z8"/>
+                    </view>
+                    <connections>
+                        <outlet property="reviewText" destination="ZzV-rY-yyh" id="1zx-bU-T2Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZw-aD-jcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4981.6000000000004" y="1052.9235382308846"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="xbO-B1-PYY">
@@ -239,7 +310,8 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <segue destination="vk1-3E-CWQ" kind="show" id="ZlQ-1N-WgS"/>
+                                                <action selector="buttonFunc:" destination="i0a-9Q-f5E" eventType="touchUpInside" id="W68-RR-WBF"/>
+                                                <segue destination="vk1-3E-CWQ" kind="show" id="Jxv-hV-Gw5"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -330,6 +402,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZlQ-1N-WgS"/>
+        <segue reference="Zcu-Fk-aR0"/>
+        <segue reference="Jxv-hV-Gw5"/>
     </inferredMetricsTieBreakers>
 </document>
