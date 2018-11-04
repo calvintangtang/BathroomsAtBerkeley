@@ -12,11 +12,7 @@ import MapKit
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     // ["Moffitt Library", "Dwinelle Hall", "Soda Hall", "Doe Library", "Bancroft Library"]
-    let bathroomList = [
-        Bathroom(name:"Moffit Library", latitude:37.872574, longitude:-122.260566),
-        Bathroom(name:"Dwinelle Hall", latitude:37.8705, longitude:-122.2606),
-        Bathroom(name:"Soda Hall", latitude:37.8756, longitude:-122.2588)
-    ]
+    let bathroomList = Database._instance.bathrooms
     
     override func viewDidLoad() {
         super.viewDidLoad()

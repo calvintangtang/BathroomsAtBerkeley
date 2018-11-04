@@ -56,6 +56,35 @@
             </objects>
             <point key="canvasLocation" x="1465" y="1739"/>
         </scene>
+        <!--List-->
+        <scene sceneID="24V-Kw-6wD">
+            <objects>
+                <tableViewController id="Rd2-D5-pqI" userLabel="List" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uuv-QN-U6u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="85" id="huA-sy-0f6">
+                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="huA-sy-0f6" id="YMe-Mi-UzD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rd2-D5-pqI" id="Q3M-ZK-Vy8"/>
+                            <outlet property="delegate" destination="Rd2-D5-pqI" id="saM-EV-Ulj"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="List" id="Tzk-ay-Zaj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOt-Wz-zQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461.5999999999999" y="345.87706146926541"/>
+        </scene>
         <!--Search-->
         <scene sceneID="Hhs-CH-8Ln">
             <objects>
@@ -95,35 +124,6 @@
             </objects>
             <point key="canvasLocation" x="1464.8" y="1052.9235382308846"/>
         </scene>
-        <!--List-->
-        <scene sceneID="xbO-B1-PYY">
-            <objects>
-                <tableViewController id="i0a-9Q-f5E" customClass="ListViewController" customModule="BathroomsAtBerkeley" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wFJ-bi-dev">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="72" id="6oS-0f-OsX">
-                                <rect key="frame" x="0.0" y="28" width="375" height="72"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6oS-0f-OsX" id="Cd8-k4-hht">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="i0a-9Q-f5E" id="i7l-3a-VXf"/>
-                            <outlet property="delegate" destination="i0a-9Q-f5E" id="nPu-UT-yJr"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="List" id="sqM-8L-HcC"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7GF-MW-0zY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1464.8" y="337.78110944527737"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -135,7 +135,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="i0a-9Q-f5E" kind="relationship" relationship="viewControllers" id="Oi5-Vc-8IA"/>
+                        <segue destination="Rd2-D5-pqI" kind="relationship" relationship="viewControllers" id="CEb-FS-Wyi"/>
                         <segue destination="GMs-27-zFa" kind="relationship" relationship="viewControllers" id="g3x-2C-HOH"/>
                         <segue destination="brp-If-6xB" kind="relationship" relationship="viewControllers" id="Ccf-rw-fA9"/>
                     </connections>
