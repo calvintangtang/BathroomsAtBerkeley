@@ -2,7 +2,7 @@
 //  ReviewPageViewController.swift
 //  BathroomsAtBerkeley
 //
-//  Created by Kyle Tse on 11/4/18.
+//  Created by Calvin Tang on 11/4/18.
 //  Copyright © 2018 Team :o. All rights reserved.
 //
 
@@ -11,7 +11,9 @@ import StarReview
 
 class ReviewPageViewController: UIViewController {
     @IBOutlet weak var starView: UIView!
-    
+    @IBOutlet weak var bathroomName: UILabel!
+    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var hours: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,8 @@ class ReviewPageViewController: UIViewController {
         star.starFillColor = UIColor(red:0.24, green:0.58, blue:0.81, alpha:1.0)
         star.starBackgroundColor = UIColor.lightGray
         starView.addSubview(star)
-    }
 
+        self.bathroomName.text = "Sample Name"
+        self.locationName.text = "I changed this"
+    }
 }
