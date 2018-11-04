@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		331A409A218ED75300C6D4C3 /* berkeley.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; path = berkeley.gpx; sourceTree = "<group>"; };
+		331A409B218ED7A100C6D4C3 /* berkeley.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; name = berkeley.gpx; path = ../../berkeley.gpx; sourceTree = "<group>"; };
 		37A1B103218E5C9400098A3D /* Bathroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bathroom.swift; sourceTree = "<group>"; };
 		37A1B105218E66CA00098A3D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		37A1B107218E9B7700098A3D /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		37B52AD3218E15EC005A5D5B = {
 			isa = PBXGroup;
 			children = (
+				331A409A218ED75300C6D4C3 /* berkeley.gpx */,
+				331A409B218ED7A100C6D4C3 /* berkeley.gpx */,
 				37B52ADE218E15EC005A5D5B /* BathroomsAtBerkeley */,
 				37B52AF5218E15ED005A5D5B /* BathroomsAtBerkeleyTests */,
 				37B52B00218E15ED005A5D5B /* BathroomsAtBerkeleyUITests */,
