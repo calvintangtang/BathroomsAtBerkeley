@@ -219,13 +219,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bathroom Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw2-KL-5qm">
-                                <rect key="frame" x="16" y="74" width="175" height="30"/>
+                                <rect key="frame" x="16" y="30" width="175" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-rY-yyh">
-                                <rect key="frame" x="34" y="126" width="308" height="425"/>
+                                <rect key="frame" x="34" y="82" width="308" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -239,7 +239,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-9p-gY3">
-                                <rect key="frame" x="213" y="559" width="129" height="36"/>
+                                <rect key="frame" x="213" y="608" width="129" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Submit Review"/>
                                 <userDefinedRuntimeAttributes>
@@ -310,7 +310,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <action selector="buttonFunc:" destination="i0a-9Q-f5E" eventType="touchUpInside" id="W68-RR-WBF"/>
+                                                <action selector="buttonClicked:" destination="i0a-9Q-f5E" eventType="touchUpInside" id="kOP-Ys-FKx"/>
                                                 <segue destination="vk1-3E-CWQ" kind="show" id="Jxv-hV-Gw5"/>
                                             </connections>
                                         </button>
@@ -324,6 +324,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="bathroomName" destination="RyJ-cK-LBV" id="nPL-lg-Rz5"/>
+                                    <outlet property="button" destination="2do-Db-Jpe" id="DLw-Wz-VWP"/>
                                     <outlet property="rating" destination="AMc-a0-Mk1" id="3WG-hi-9tu"/>
                                 </connections>
                             </tableViewCell>

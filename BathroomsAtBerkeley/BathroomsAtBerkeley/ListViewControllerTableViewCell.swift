@@ -11,6 +11,7 @@ import UIKit
 class ListViewControllerTableViewCell: UITableViewCell {
     @IBOutlet weak var bathroomName: UILabel!
     
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var rating: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

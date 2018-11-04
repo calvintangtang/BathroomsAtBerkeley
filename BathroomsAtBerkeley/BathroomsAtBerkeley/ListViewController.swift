@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import Foundation
 
 class ListViewController: UITableViewController {
     let list = Database._instance.bathrooms
+    var rowPressed = 0
+    
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(list.count)
     }
     
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        rowPressed = sender.tag
+    }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListViewControllerTableViewCell
         cell.bathroomName.text = list[indexPath.row].getName()
         cell.rating.text = String(list[indexPath.row].rating)
-        
+        cell.button.tag = indexPath.row
         return(cell)
     }
     
@@ -36,6 +42,12 @@ class ListViewController: UITableViewController {
     func loadData() {
         tableView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! ReviewPageViewController
+        dest.item = list[rowPressed]
+    }
+    
     
 }
 
