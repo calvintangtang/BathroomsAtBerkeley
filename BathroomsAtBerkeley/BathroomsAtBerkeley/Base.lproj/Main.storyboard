@@ -219,13 +219,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bathroom Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw2-KL-5qm">
-                                <rect key="frame" x="16" y="30" width="175" height="30"/>
+                                <rect key="frame" x="16" y="74" width="175" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write your review here!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-rY-yyh">
-                                <rect key="frame" x="33" y="118" width="309" height="472"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-rY-yyh">
+                                <rect key="frame" x="33" y="162" width="309" height="389"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -239,7 +239,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-9p-gY3">
-                                <rect key="frame" x="213" y="598" width="129" height="46"/>
+                                <rect key="frame" x="213" y="559" width="129" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Submit Review"/>
                                 <userDefinedRuntimeAttributes>
@@ -252,39 +252,39 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitButton:" destination="i1c-Ec-ufK" eventType="touchUpInside" id="aoy-2v-7YW"/>
-                                    <segue destination="i0a-9Q-f5E" kind="show" id="Zcu-Fk-aR0"/>
+                                    <segue destination="F97-A0-gqR" kind="unwind" identifier="unwindToListViewController" unwindAction="prepareForUnwindWithSegue:" id="ipq-Ox-dxG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leW-jE-VdM">
-                                <rect key="frame" x="33" y="68" width="309" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaA-sF-syh">
+                                <rect key="frame" x="16" y="112" width="70" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q8Z-9p-gY3" firstAttribute="top" secondItem="ZzV-rY-yyh" secondAttribute="bottom" constant="8" id="63Y-qv-Vxf"/>
                             <constraint firstItem="ZzV-rY-yyh" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="33" id="Cuy-h8-ETM"/>
-                            <constraint firstItem="ZzV-rY-yyh" firstAttribute="top" secondItem="leW-jE-VdM" secondAttribute="bottom" constant="8" id="FLJ-qb-sXZ"/>
-                            <constraint firstItem="leW-jE-VdM" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="33" id="KQO-vj-F2Y"/>
+                            <constraint firstItem="RaA-sF-syh" firstAttribute="top" secondItem="vw2-KL-5qm" secondAttribute="bottom" constant="8" id="LuV-LL-Mbj"/>
+                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="bottom" secondItem="Q8Z-9p-gY3" secondAttribute="bottom" constant="23" id="TfR-k5-j2E"/>
                             <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="ZzV-rY-yyh" secondAttribute="trailing" constant="33" id="WBv-EC-c2f"/>
                             <constraint firstItem="vw2-KL-5qm" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="16" id="amT-xH-RwZ"/>
-                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="bottom" secondItem="Q8Z-9p-gY3" secondAttribute="bottom" constant="23" id="atm-83-vwW"/>
-                            <constraint firstItem="leW-jE-VdM" firstAttribute="top" secondItem="vw2-KL-5qm" secondAttribute="bottom" constant="8" id="cwW-Rh-nlZ"/>
+                            <constraint firstItem="RaA-sF-syh" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="16" id="dI2-95-0qH"/>
                             <constraint firstItem="vw2-KL-5qm" firstAttribute="top" secondItem="0ij-pZ-9Z8" secondAttribute="top" constant="10" id="eDu-sl-xJK"/>
-                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="leW-jE-VdM" secondAttribute="trailing" constant="33" id="fik-Cw-RRv"/>
-                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="Q8Z-9p-gY3" secondAttribute="trailing" constant="33" id="pir-Gb-GSU"/>
                             <constraint firstItem="ZzV-rY-yyh" firstAttribute="top" secondItem="vw2-KL-5qm" secondAttribute="bottom" constant="58" id="u6g-7j-iMC"/>
-                            <constraint firstItem="Q8Z-9p-gY3" firstAttribute="top" secondItem="leW-jE-VdM" secondAttribute="bottom" constant="488" id="yOt-Qj-0Tx"/>
+                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="Q8Z-9p-gY3" secondAttribute="trailing" constant="33" id="xIF-Vm-LlW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0ij-pZ-9Z8"/>
                     </view>
                     <connections>
-                        <outlet property="bathroomName" destination="vw2-KL-5qm" id="RK3-ru-7HW"/>
+                        <outlet property="bathroomName" destination="vw2-KL-5qm" id="sMu-Zw-nmI"/>
+                        <outlet property="rating" destination="RaA-sF-syh" id="GUi-dM-gP9"/>
                         <outlet property="reviewText" destination="ZzV-rY-yyh" id="1zx-bU-T2Q"/>
-                        <outlet property="starView" destination="leW-jE-VdM" id="A7F-ps-cdx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZw-aD-jcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="F97-A0-gqR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4981.6000000000004" y="1052.9235382308846"/>
         </scene>
@@ -414,7 +414,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zcu-Fk-aR0"/>
         <segue reference="Jxv-hV-Gw5"/>
     </inferredMetricsTieBreakers>
 </document>

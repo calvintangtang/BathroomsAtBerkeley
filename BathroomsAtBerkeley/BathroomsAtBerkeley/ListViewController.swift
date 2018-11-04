@@ -41,6 +41,7 @@ class ListViewController: UITableViewController {
     /* Reloads data each time this VC is active */
     func loadData() {
         tableView.reloadData()
+        print("Reloading data")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,6 +49,8 @@ class ListViewController: UITableViewController {
         dest.item = list[rowPressed]
     }
     
-    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        self.loadData()
+    }
 }
 
