@@ -6,6 +6,8 @@
 //  Copyright © 2018 Team :o. All rights reserved.
 //
 import Foundation
+import MapKit
+
 enum tags:String {
     case GenderNeutral
     case PrivateStall
@@ -15,6 +17,9 @@ enum tags:String {
 class Bathroom {
     /* Name of location */
     var name:String!
+    
+    /* Coordinates of location */
+    var coordinate:CLLocationCoordinate2D
     
     /* Rating of bathroom */
     var rating:Double
@@ -27,8 +32,9 @@ class Bathroom {
     
     /* Initializes new bathroom with name NAME and rating
      of 0.0 */
-    init (name:String) {
+    init (name:String, latitude:Double, longitude:Double) {
         self.name = name
+        self.coordinate = CLLocationCoordinate2D(latitude:latitude, longitude:longitude)
         self.rating = 0.0
         self.numReviews = 0
     }
