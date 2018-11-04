@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33A22E58218EF5A200C2D8C6 /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A22E57218EF5A200C2D8C6 /* ReviewPageViewController.swift */; };
+		372A007E218EF4E7003CDDA0 /* ListViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A007D218EF4E7003CDDA0 /* ListViewControllerTableViewCell.swift */; };
 		37A1B104218E5C9400098A3D /* Bathroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1B103218E5C9400098A3D /* Bathroom.swift */; };
 		37A1B106218E66CA00098A3D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1B105218E66CA00098A3D /* Review.swift */; };
 		37A1B108218E9B7700098A3D /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1B107218E9B7700098A3D /* Database.swift */; };
@@ -45,6 +46,7 @@
 		331A409A218ED75300C6D4C3 /* berkeley.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; path = berkeley.gpx; sourceTree = "<group>"; };
 		331A409B218ED7A100C6D4C3 /* berkeley.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; name = berkeley.gpx; path = ../../berkeley.gpx; sourceTree = "<group>"; };
 		33A22E57218EF5A200C2D8C6 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
+		372A007D218EF4E7003CDDA0 /* ListViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		37A1B103218E5C9400098A3D /* Bathroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bathroom.swift; sourceTree = "<group>"; };
 		37A1B105218E66CA00098A3D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		37A1B107218E9B7700098A3D /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				37A1B103218E5C9400098A3D /* Bathroom.swift */,
 				37A1B105218E66CA00098A3D /* Review.swift */,
 				37A1B107218E9B7700098A3D /* Database.swift */,
+				372A007D218EF4E7003CDDA0 /* ListViewControllerTableViewCell.swift */,
 			);
 			path = BathroomsAtBerkeley;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				37A1B104218E5C9400098A3D /* Bathroom.swift in Sources */,
 				37B52AE2218E15EC005A5D5B /* MapViewController.swift in Sources */,
 				37A1B108218E9B7700098A3D /* Database.swift in Sources */,
+				372A007E218EF4E7003CDDA0 /* ListViewControllerTableViewCell.swift in Sources */,
 				37A1B106218E66CA00098A3D /* Review.swift in Sources */,
 				33A22E58218EF5A200C2D8C6 /* ReviewPageViewController.swift in Sources */,
 			);
