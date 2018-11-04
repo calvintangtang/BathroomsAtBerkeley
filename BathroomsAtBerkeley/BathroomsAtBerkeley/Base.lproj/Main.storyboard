@@ -224,8 +224,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-rY-yyh">
-                                <rect key="frame" x="34" y="82" width="308" height="518"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write your review here!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-rY-yyh">
+                                <rect key="frame" x="33" y="118" width="309" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -239,7 +239,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-9p-gY3">
-                                <rect key="frame" x="213" y="608" width="129" height="36"/>
+                                <rect key="frame" x="213" y="598" width="129" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Submit Review"/>
                                 <userDefinedRuntimeAttributes>
@@ -255,22 +255,33 @@
                                     <segue destination="i0a-9Q-f5E" kind="show" id="Zcu-Fk-aR0"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leW-jE-VdM">
+                                <rect key="frame" x="33" y="68" width="309" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Q8Z-9p-gY3" firstAttribute="top" secondItem="ZzV-rY-yyh" secondAttribute="bottom" constant="8" id="0UJ-c4-3uw"/>
-                            <constraint firstItem="ZzV-rY-yyh" firstAttribute="top" secondItem="vw2-KL-5qm" secondAttribute="bottom" constant="22" id="3ni-1I-k18"/>
-                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="ZzV-rY-yyh" secondAttribute="trailing" constant="33" id="59U-AT-diD"/>
+                            <constraint firstItem="Q8Z-9p-gY3" firstAttribute="top" secondItem="ZzV-rY-yyh" secondAttribute="bottom" constant="8" id="63Y-qv-Vxf"/>
+                            <constraint firstItem="ZzV-rY-yyh" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="33" id="Cuy-h8-ETM"/>
+                            <constraint firstItem="ZzV-rY-yyh" firstAttribute="top" secondItem="leW-jE-VdM" secondAttribute="bottom" constant="8" id="FLJ-qb-sXZ"/>
+                            <constraint firstItem="leW-jE-VdM" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="33" id="KQO-vj-F2Y"/>
+                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="ZzV-rY-yyh" secondAttribute="trailing" constant="33" id="WBv-EC-c2f"/>
                             <constraint firstItem="vw2-KL-5qm" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="16" id="amT-xH-RwZ"/>
                             <constraint firstItem="0ij-pZ-9Z8" firstAttribute="bottom" secondItem="Q8Z-9p-gY3" secondAttribute="bottom" constant="23" id="atm-83-vwW"/>
-                            <constraint firstItem="ZzV-rY-yyh" firstAttribute="leading" secondItem="0ij-pZ-9Z8" secondAttribute="leading" constant="34" id="dqq-dI-tJX"/>
+                            <constraint firstItem="leW-jE-VdM" firstAttribute="top" secondItem="vw2-KL-5qm" secondAttribute="bottom" constant="8" id="cwW-Rh-nlZ"/>
                             <constraint firstItem="vw2-KL-5qm" firstAttribute="top" secondItem="0ij-pZ-9Z8" secondAttribute="top" constant="10" id="eDu-sl-xJK"/>
+                            <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="leW-jE-VdM" secondAttribute="trailing" constant="33" id="fik-Cw-RRv"/>
                             <constraint firstItem="0ij-pZ-9Z8" firstAttribute="trailing" secondItem="Q8Z-9p-gY3" secondAttribute="trailing" constant="33" id="pir-Gb-GSU"/>
+                            <constraint firstItem="ZzV-rY-yyh" firstAttribute="top" secondItem="vw2-KL-5qm" secondAttribute="bottom" constant="58" id="u6g-7j-iMC"/>
+                            <constraint firstItem="Q8Z-9p-gY3" firstAttribute="top" secondItem="leW-jE-VdM" secondAttribute="bottom" constant="488" id="yOt-Qj-0Tx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0ij-pZ-9Z8"/>
                     </view>
                     <connections>
+                        <outlet property="bathroomName" destination="vw2-KL-5qm" id="RK3-ru-7HW"/>
                         <outlet property="reviewText" destination="ZzV-rY-yyh" id="1zx-bU-T2Q"/>
+                        <outlet property="starView" destination="leW-jE-VdM" id="A7F-ps-cdx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZw-aD-jcx" userLabel="First Responder" sceneMemberID="firstResponder"/>

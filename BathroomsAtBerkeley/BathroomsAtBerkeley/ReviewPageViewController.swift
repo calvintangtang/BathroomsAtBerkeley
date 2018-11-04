@@ -31,4 +31,9 @@ class ReviewPageViewController: UIViewController {
         self.bathroomName.text = item.name
         self.locationName.text = String(item.numReviews)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! WriteReviewViewController
+        dest.displayName = item.name!
+    }
 }
