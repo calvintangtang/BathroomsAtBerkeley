@@ -15,6 +15,9 @@ class WriteReviewViewController: UIViewController {
     @IBOutlet weak var rating: UITextField!
     
     @IBAction func submitButton(_ sender: Any) {
+        if (Double(rating.text!) ?? 0.0 > 5.0) {
+            rating.text = "5.0"
+        }
         self.submitReview(name: self.displayName, rating: Double(rating.text!) ?? 0.0, reviewText: reviewText.text)
         self.performSegue(withIdentifier: "unwindToListViewController", sender: self)
     }
