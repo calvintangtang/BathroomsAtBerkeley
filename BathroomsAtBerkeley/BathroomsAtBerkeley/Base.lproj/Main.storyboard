@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="2404" y="1052.9235382308846"/>
         </scene>
-        <!--View Controller-->
+        <!--Review Page View Controller-->
         <scene sceneID="ZGE-rK-R2C">
             <objects>
-                <viewController id="vk1-3E-CWQ" sceneMemberID="viewController">
+                <viewController id="vk1-3E-CWQ" customClass="ReviewPageViewController" customModule="BathroomsAtBerkeley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oiP-1j-mGk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,9 +138,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xu1-CQ-g57">
+                                                <rect key="frame" x="26" y="106" width="323" height="53"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Xu1-CQ-g57" secondAttribute="trailing" constant="26" id="26e-kd-oL3"/>
+                                            <constraint firstItem="Xu1-CQ-g57" firstAttribute="top" secondItem="UGd-ft-JMP" secondAttribute="bottom" constant="8" id="6Nh-ad-VBv"/>
                                             <constraint firstItem="UGd-ft-JMP" firstAttribute="top" secondItem="1aV-cP-VIo" secondAttribute="bottom" constant="8" id="CFz-r5-i5T"/>
                                             <constraint firstItem="q8P-5L-krU" firstAttribute="top" secondItem="mYu-XT-jXI" secondAttribute="topMargin" constant="69" id="WyA-pc-Val"/>
                                             <constraint firstItem="UGd-ft-JMP" firstAttribute="top" secondItem="mYu-XT-jXI" secondAttribute="top" constant="77" id="bPp-Wh-BN7"/>
@@ -148,6 +154,8 @@
                                             <constraint firstAttribute="trailing" secondItem="q8P-5L-krU" secondAttribute="trailing" constant="26" id="dBj-ot-XSI"/>
                                             <constraint firstAttribute="trailing" secondItem="1aV-cP-VIo" secondAttribute="trailing" constant="26" id="grY-dc-6B8"/>
                                             <constraint firstItem="q8P-5L-krU" firstAttribute="top" secondItem="1aV-cP-VIo" secondAttribute="bottom" constant="8" id="how-1V-ZBK"/>
+                                            <constraint firstItem="Xu1-CQ-g57" firstAttribute="leading" secondItem="mYu-XT-jXI" secondAttribute="leading" constant="26" id="iG3-YN-2Sg"/>
+                                            <constraint firstItem="Xu1-CQ-g57" firstAttribute="top" secondItem="mYu-XT-jXI" secondAttribute="top" constant="106" id="q98-Br-fqM"/>
                                             <constraint firstItem="1aV-cP-VIo" firstAttribute="leading" secondItem="mYu-XT-jXI" secondAttribute="leading" constant="26" id="wp3-ey-GEi"/>
                                         </constraints>
                                     </view>
@@ -173,6 +181,9 @@
                         <viewLayoutGuide key="safeArea" id="PcV-91-paj"/>
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="starView" destination="Xu1-CQ-g57" id="BOr-Ze-OOc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFK-3X-h7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
