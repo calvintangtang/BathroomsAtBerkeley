@@ -102,25 +102,10 @@
             </objects>
             <point key="canvasLocation" x="1464.8" y="1052.9235382308846"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8Ek-nL-n47">
-            <objects>
-                <viewController id="xUG-02-04D" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TMS-4S-RLv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ddd-jq-1kN"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nM7-RS-g2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2738" y="338"/>
-        </scene>
         <!--List-->
         <scene sceneID="xbO-B1-PYY">
             <objects>
-                <tableViewController id="i0a-9Q-f5E" sceneMemberID="viewController">
+                <tableViewController id="i0a-9Q-f5E" customClass="ListViewController" customModule="BathroomsAtBerkeley" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wFJ-bi-dev">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

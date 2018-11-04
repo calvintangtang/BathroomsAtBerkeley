@@ -48,8 +48,9 @@ class Bathroom {
         return(self.tags)
     }
     
+    /* Updates rating number of current REVIEW */
     func updateRating (newRating:Double) {
-        self.numReviews += 1
         self.rating = ((self.rating * Double(self.numReviews)) + newRating) / (Double(numReviews) + 1.0)
+        self.numReviews += 1
     }
 }
