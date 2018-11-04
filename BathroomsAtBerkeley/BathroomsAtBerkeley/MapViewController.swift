@@ -7,15 +7,59 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController {
+    @IBOutlet weak var mapView: MKMapView!
+    // ["Moffitt Library", "Dwinelle Hall", "Soda Hall", "Doe Library", "Bancroft Library"]
+    let bathroomList = [
+        Bathroom(name:"Moffit Library", latitude: 37.872574, longitude: -122.260566),
+        Bathroom(name:"Dwinelle Hall", latitude: 37.8705, longitude: -122.2606),
+        Bathroom(name:"Soda Hall", latitude: 37.8756, longitude: -122.2588)
+    ]
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Database._instance = Database()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        mapView.showsUserLocation = true
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        for b in bathroomList {
+            let pin = MKPointAnnotation()
+            pin.title = b.name
+            pin.coordinate = b.coordinate
+            mapView.addAnnotation(pin)
+        }
     }
-
-
+    
 }
 
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let lat = locations.last?.coordinate.latitude, let long = locations.last?.coordinate.longitude {
+            print("\(lat),\(long)")
+            centerMapOnLocation(location: CLLocation(latitude:lat, longitude:long))
+        } else {
+            print("No coordinates")
+            // center map to Moffit Library
+            let loc = CLLocation(latitude: 37.872574, longitude: -122.260566)
+            centerMapOnLocation(location: loc)
+        }
+    }
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: 1000,
+                                                  longitudinalMeters: 1000)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+}
