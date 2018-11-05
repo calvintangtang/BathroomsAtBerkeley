@@ -15,6 +15,7 @@ class ReviewPageViewController: UIViewController {
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var hours: UILabel!
     
+    /* Temp BATHROOM object to set up segue */
     var item:Bathroom = Bathroom(name: "Placeholder", latitude: 0, longitude: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class ReviewPageViewController: UIViewController {
         self.locationName.text = String(item.numReviews)
     }
     
+    /* Preparation to segue into Write Review screen */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! WriteReviewViewController
         dest.displayName = item.name!

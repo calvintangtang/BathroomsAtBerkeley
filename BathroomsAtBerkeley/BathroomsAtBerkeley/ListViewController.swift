@@ -21,6 +21,7 @@ class ListViewController: UITableViewController {
         rowPressed = sender.tag
     }
     
+    /* Populates list view on screen */
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListViewControllerTableViewCell
         cell.bathroomName.text = list[indexPath.row].getName()
@@ -41,14 +42,15 @@ class ListViewController: UITableViewController {
     /* Reloads data each time this VC is active */
     func loadData() {
         tableView.reloadData()
-        print("Reloading data")
     }
     
+    /* Preparation to segue into next scene */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! ReviewPageViewController
         dest.item = list[rowPressed]
     }
     
+    /* Allows for reloading of data */
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
         self.loadData()
     }

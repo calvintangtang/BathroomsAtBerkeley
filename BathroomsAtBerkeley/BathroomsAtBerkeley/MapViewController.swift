@@ -12,7 +12,7 @@ import CoreLocation
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    // ["Moffitt Library", "Dwinelle Hall", "Soda Hall", "Doe Library", "Bancroft Library"]
+    /* List of BATHROOM objects */
     let bathroomList = Database._instance.bathrooms
     let locationManager = CLLocationManager()
     
@@ -35,13 +35,13 @@ class MapViewController: UIViewController {
     
 }
 
+/* Implementation of Apple Maps */
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let lat = locations.last?.coordinate.latitude, let long = locations.last?.coordinate.longitude {
             print("\(lat),\(long)")
             centerMapOnLocation(location: CLLocation(latitude:lat, longitude:long))
         } else {
-            print("No coordinates")
             // center map to Moffit Library
             let loc = CLLocation(latitude: 37.872574, longitude: -122.260566)
             centerMapOnLocation(location: loc)
